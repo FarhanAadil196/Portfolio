@@ -769,7 +769,9 @@ textarea{
     font-size: 15px;
     padding: 15px;
   }
-   
+  .btns{
+    padding:2px;
+}
 }
 @media (max-width:350px){
     .parent-2 .child-2 button {
@@ -793,4 +795,5 @@ textarea{
     color: white;
     font-size: 10px;
     }
+    
 }
