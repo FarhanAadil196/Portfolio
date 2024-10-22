@@ -84,7 +84,7 @@ nav {
     transition: all .5s ease;
 }
 .nav-links a:hover{
-    border-bottom: 2px solid #ECDFCC;
+    border-bottom: 2px solid white;
 }
 
 /* Hamburger menu */
@@ -125,7 +125,7 @@ nav {
 }
 
 .parent-1 .child-1 p{
-    color: #ECDFCC;
+    color: white;
     /* text-wrap: balance; */
     
 }
@@ -192,7 +192,7 @@ nav {
     font-size: 25px;
 }
 .fas{
-    color: #ECDFCC;
+    color: white;
     font-size: 20px;
 }
   
@@ -203,7 +203,7 @@ nav {
   
   .child-1 .container button:nth-child(2):hover {
     background-color: #050505;
-    color: #ECDFCC;
+    color: white;
   }
   
   .child-1 .container button:nth-child(3):hover {
@@ -230,7 +230,7 @@ nav {
     background-color: transparent;
     border: 2px solid #FF6500;
     border-radius: 30px;
-    color: #ECDFCC;
+    color: white;
     margin: 0 auto;
     transition: all .5s ease;
     font-weight: 600;
@@ -300,7 +300,7 @@ h1{
     height: 55px;
     background-color: transparent;
     border: none;
-    color: #ECDFCC;
+    color: white;
     margin: 0 auto;
     transition: all .5s ease;
     font-weight: 600;
@@ -321,7 +321,7 @@ a{
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background-color: #ECDFCC;
+    background-color: white;
 }
 .parent-2 .child-2 p{
     color: #ffffff;
@@ -705,7 +705,7 @@ textarea{
         font-size: 30px;
     }
     .parent-1 .child-1 p {
-        color: #ECDFCC;
+        color: white;
         /* text-wrap: balance; */
         font-size: 12px;
     }
