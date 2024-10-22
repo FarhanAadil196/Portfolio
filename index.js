@@ -90,4 +90,46 @@ const links = document.querySelectorAll('.blank').forEach(link => {
 });
 
 
+function reset1ButtonColors() {
+    homebtn.style.borderBottom = "transparent";
+    projectbtn.style.borderBottom = "transparent";
+    contactbtn.style.borderBottom = "transparent";
+    aboutbtn.style.borderBottom = "transparent";
+}
+let homebtn = document.getElementById('homebtn');
+let aboutbtn = document.getElementById('aboutbtn');
+let projectbtn = document.getElementById('projectbtn');
+let contactbtn = document.getElementById('contactbtn');
 
+homebtn.addEventListener('click' , () => {
+    reset1ButtonColors();
+    homebtn.style.borderBottom = '1px solid white';
+})
+
+aboutbtn.addEventListener('click' , () => {
+    reset1ButtonColors();
+    aboutbtn.style.borderBottom = '1px solid white';
+})
+
+projectbtn.addEventListener('click' , () => {
+    reset1ButtonColors();
+    projectbtn.style.borderBottom = '1px solid white';
+})
+
+contactbtn.addEventListener('click' , () => {
+    reset1ButtonColors();
+    contactbtn.style.borderBottom= '1px solid white';
+})
+
+let hero = document.getElementById('home')
+let about = document.getElementById('about')
+let projects = document.getElementById('projects')
+let contact = document.getElementById('contact')
+
+hero.addEventListener("scroll", (event) => {
+    lastKnownScrollPosition = window.scrollY;
+});
+
+about.addEventListener('scroll' , () => {
+    btn.style.backgroundColor='black';
+})
