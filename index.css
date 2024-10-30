@@ -3,26 +3,6 @@
 html{
     scroll-behavior: smooth;
 }
-/* @keyframes appear {
-    from{
-        opacity: 0;
-        scale: 0.5;
-    }
-    to{
-        opacity: 1;
-        scale: 1;
-    }
-}
-@keyframes header {
-    from{
-        transform: translateY(-150px);
-    }
-    to{
-        transform: translateY(0);
-    }
-} */
-
-
 body{
     overflow-x: hidden;
 }
@@ -38,24 +18,18 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    /* background: #000000cc; */
-    /* backdrop-filter: blur(10px); */
     color: black;
     position: fixed;
     width: 100%;
     box-shadow: 0 0 12px black;
     transition: background-color .5s ease;
     z-index: 5;
-    /* animation: header 1.5s linear; */
 }
-
-
 
 nav {
     display: flex;
     align-items: center;
 }
-
 
 .nav-links {
     list-style: none;
@@ -68,6 +42,7 @@ nav {
 .nav-links li {
     padding: 10px;
 }
+
 .logo h2{
     
     font-family: "Righteous", sans-serif;
@@ -83,14 +58,7 @@ nav {
     padding: 5px;
     transition: all .5s ease;
 }
-/* #homebtn{
-    border-bottom: 1px solid white;
-} */
-/* .nav-links a:hover{
-    border-bottom: 2px solid white;
-} */
 
-/* Hamburger menu */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -108,7 +76,6 @@ nav {
     transition: all 0.3s ease;
 }
 
-/* Hide checkbox */
 #menu-toggle {
     display: none;
 }
@@ -124,16 +91,13 @@ nav {
     font-family: "Righteous", sans-serif;
     font-size: 35px;
     text-transform: uppercase;
-    /* height: 35px; */
+    text-shadow: 0px 4px 4px #000000bd;
 }
 
 .parent-1 .child-1 p{
     color: black;
-    /* text-wrap: balance; */
-    
 }
 
-/*          typing            */
 .typing-container {
     font-size: 20px;
     margin: 0 auto;
@@ -142,12 +106,12 @@ nav {
     border-right: 2px solid;
     white-space: nowrap;
     overflow: hidden;
-    width: max-content; /* Adjust according to the sentence length */
+    width: max-content;
   }
   
   @keyframes typing {
     from { width: 0; }
-    to { width: fit-content; } /* Same as the container width */
+    to { width: fit-content; }
   }
   
   @keyframes blink {
@@ -158,7 +122,6 @@ nav {
     animation: blink 0.8 step-end infinite;
   }
 
-  /*             end               */
 
 .parent-1 .child-1 h2 {
     font-size: 22px;
@@ -172,24 +135,6 @@ nav {
     white-space: nowrap;
     margin: 0 auto;
 }
-
-/* @keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 40%;
-    }
-}
-
-@keyframes blink {
-    0%, 100% {
-        border-color: transparent;
-    }
-    50% {
-        border-color: #FF6500;
-    }
-} */
 
  .child-1 .container {
     position: relative;
@@ -268,7 +213,6 @@ a{
     text-decoration: none;
 }
 .parent-1 .child-2 img{
-    /* width: 300px; */
     max-width: 100%;
     height: 70vh;
     object-fit: contain;
@@ -289,8 +233,6 @@ a{
 
 .child-1,.child-2{
     flex: 1 1 300px;
-    /* margin: 10px;  */
-    /* background-color: lightgrey; */
     height: auto;
     z-index: 3;
 }
@@ -423,11 +365,9 @@ a{
 .card img{   
     height: 100%;
     width: 100%;
-    /* max-width: 400px; */
     object-fit: cover;
     border-radius: 20px;
     cursor: pointer;
-    /* filter: brightness(.7) */
     border: 2px solid black;
 
 }
@@ -436,7 +376,6 @@ a{
 }
 .card .overlay h2{
     font-family: "Righteous", sans-serif;
-    /* color: #0274b3; */
 }
 .card .fas{
     color: #ffffff;
@@ -487,7 +426,6 @@ a{
     justify-content: center;
     gap: 20px; 
     flex-wrap: wrap;
-    /* flex-direction: column; */
     text-align: center;
     padding: 50px;
     height: 100vh;
@@ -503,19 +441,13 @@ a{
     margin: 100px;
 }
 #contact .contact-ch .child-1{
-    /* border: 2px solid #2753a7; */
     height: 100%;
     width: 100%;
-    /* padding-left: 10px; */
     text-align: start;
-    /* padding: 40px; */
 }
 #contact .contact-ch .child-2{
-    /* border: 2px solid #2753a7; */
     height: 100%;
     width: 100%;
-    /* padding-left: 10px; */
-    /* text-align: start; */
 }
 .contact-ch .child-1 span{
     color: #0274b3;
@@ -529,7 +461,6 @@ a{
     padding: 10px;
     color: black;
     caret-color: #FF6500;
-    /* cursor: pointer; */
 }
 .contact-ch .child-2 button{
     background-color: transparent;
@@ -567,13 +498,11 @@ input:-webkit-autofill{
 }
 textarea:focus{
     outline: none;
-    /* border: none; */
 }
 textarea{
     color: black;
 }
 .social-media{
-    /* border: 2px solid #FF6500; */
     display: flex;
         justify-content: center;
         align-items: center;
@@ -657,9 +586,7 @@ textarea{
     }
 }
 @media (max-width: 865px) {
-    /* header{
-        display: none;
-    } */
+
     .nav-links {
         display: none;
         flex-direction: column;
@@ -668,13 +595,10 @@ textarea{
         top: 60px;
         left: 0;
         background-color: rgb(43, 45, 66);
-        /* padding: 20px 0; */
     }
 
     .nav-links li {
         text-align: center;
-        /* padding: 15px 0; */
-        
     }
 
     .hamburger {
@@ -702,11 +626,9 @@ textarea{
         flex-direction: column;
     }
     .parent-2 .child-1 p {
-        /* text-align: center; */
         font-size: 16px;
     }
     .parent-1{
-        /* padding-top: 110px; */
         height: auto;
     }
     #experiences,#skills,#educates{
@@ -721,7 +643,6 @@ textarea{
 @media (max-width:450px){
     .parent-1{
         padding-top: 110px;
-        /* height: auto; */
     }
     .parent-1 .child-1 h2{
         animation: typing 4s steps(10), blink .7s step-end infinite;
@@ -732,7 +653,6 @@ textarea{
     }
     .parent-1 .child-1 p {
         color: white;
-        /* text-wrap: balance; */
         font-size: 12px;
     }
     .parent-2 .child-2 .abt-p {
@@ -780,7 +700,6 @@ textarea{
     }
     .card {
         width: 100%;
-        /* max-width: 100%; */
         height:300px;
     }
   .logos img{
