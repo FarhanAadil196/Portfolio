@@ -27,12 +27,14 @@ function changeBackgroundColor() {
     let navlink = document.getElementById('navlink')
     let scrollPosition = window.scrollY;
 
-    if (scrollPosition > 100) {
+    if (scrollPosition > 10) {
         header.style.backgroundColor = '#1E3E62';
         navlink.style.backgroundColor = '#1E3E62';
         let name = document.getElementById('name').style.color = "#FF6500"
+        let homebtn = document.getElementById('homebtn').style.borderBottom = 'transparent'
     } else {
-        let name = document.getElementById('name').style.color = "white"
+        let name = document.getElementById('name').style.color = "black"
+        let homebtn = document.getElementById('homebtn').style.borderBottom = '2px solid black'
         header.style.backgroundColor = 'transparent';
         navlink.style.backdropFilter = 'blur(7px)';
         navlink.style.backgroundColor = 'transparent';
@@ -133,3 +135,27 @@ hero.addEventListener("scroll", (event) => {
 about.addEventListener('scroll' , () => {
     btn.style.backgroundColor='black';
 })
+
+const sentences = ["Front-End Developer", "Web Developer"];
+let part = 0;
+let index = 0;
+let interval = 100;
+const typingText = document.getElementById('typing-text');
+
+function typeSentence() {
+  let currentSentence = sentences[part];
+
+  typingText.textContent = currentSentence.slice(0, index++);
+
+  if (index > currentSentence.length) {
+    setTimeout(() => {
+      index = 0;
+      part = (part + 1) % sentences.length; // Switch to next sentence
+      setTimeout(typeSentence, interval); // Start typing the next sentence
+    }, 1000); // Pause before moving to the next sentence
+  } else {
+    setTimeout(typeSentence, interval); // Continue typing
+  }
+}
+
+typeSentence(); // Start the typing effect
