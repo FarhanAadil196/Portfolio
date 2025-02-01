@@ -228,7 +228,7 @@ a{
     flex-wrap: wrap;
     text-align: center;
     padding: 80px;
-    height: 100vh;
+    height: fit-content;
 }
 
 .child-1,.child-2{
@@ -475,10 +475,9 @@ a{
 }
 .contact-ch .child-2 .fas{
     font-size: 25px;
+    color: black;
 }
-.contact-ch .child-2 .fas:hover{
-    color: #050505;
-}
+
 textarea{
     background-color: transparent;
     border: none;
