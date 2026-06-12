@@ -17,7 +17,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 5px 15px;
     color: black;
     position: fixed;
     width: 100%;
@@ -146,7 +146,7 @@ nav {
     margin-top: 10px;
   }
   
-.child-1 .container button {
+  .child-1 .container button {
     width: 50px;
     height: 50px;
     border: none;
@@ -164,23 +164,24 @@ nav {
     font-size: 20px;
 }
   
-  .child-1 .container button:nth-child(1):hover {
-    background-color: #2753a7;
-    color: #000000;
+  .child-1 .container button:first-of-type:hover {
+    background-color: #c32f27;
   }
   
-  .child-1 .container button:nth-child(2):hover {
+  .child-1 .container button:nth-of-type(2):hover {
     background-color: #050505;
-    color: white;
   }
   
-  .child-1 .container button:nth-child(3):hover {
+  .child-1 .container button:nth-of-type(3):hover {
     background-color: rgb(40, 145, 40);
   }
   
-  .child-1 .container button:nth-child(4):hover {
+  .child-1 .container button:nth-of-type(4):hover {
     background-color: #0274b3;
   }
+  
+
+
   .parent-1 {
     display: flex; 
     align-items: center;

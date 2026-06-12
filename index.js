@@ -136,7 +136,10 @@ about.addEventListener('scroll' , () => {
     btn.style.backgroundColor='black';
 })
 
-const sentences = ["Front-End Developer", "Web Developer"];
+const sentences = ["Junior Associate",
+  "Mortgage Operations Professional",
+  "Policy Production Specialist",
+  "React Developer"];
 let part = 0;
 let index = 0;
 let interval = 100;
