@@ -22,69 +22,55 @@ window.onscroll = function () {
     changeBackgroundColor();
 };
 
-function changeBackgroundColor() {
-    let header = document.getElementById('header');
-    let navlink = document.getElementById('navlink')
-    let scrollPosition = window.scrollY;
 
-    if (scrollPosition > 10) {
-        header.style.backgroundColor = '#1E3E62';
-        navlink.style.backgroundColor = '#1E3E62';
-        let name = document.getElementById('name').style.color = "#FF6500"
-        let homebtn = document.getElementById('homebtn').style.borderBottom = 'transparent'
-    } else {
-        let name = document.getElementById('name').style.color = "black"
-        let homebtn = document.getElementById('homebtn').style.borderBottom = '2px solid black'
-        header.style.backgroundColor = 'transparent';
-        navlink.style.backdropFilter = 'blur(7px)';
-        navlink.style.backgroundColor = 'transparent';
-    }
-}
+const educateBtn = document.getElementById("education");
+const experienceBtn = document.getElementById("experience");
+const skillBtn = document.getElementById("skill");
 
-let educatebtn = document.getElementById('education');
-let experiencebtn = document.getElementById('experience');
-let skillbtn = document.getElementById('skill');
-let education = document.getElementById('educates');
-let experience = document.getElementById('experiences');
-let skills = document.getElementById('skills');
+const education = document.getElementById("educates");
+const experience = document.getElementById("experiences");
+const skills = document.getElementById("skills");
 
+const activeColor = "#2563EB"; // Professional blue
 
-function resetButtonColors() {
-    educatebtn.style.backgroundColor = "transparent";
-    experiencebtn.style.backgroundColor = "transparent";
-    skillbtn.style.backgroundColor = "transparent";
-}
+function resetTabs() {
+    // Reset buttons
+    [educateBtn, experienceBtn, skillBtn].forEach(btn => {
+        btn.style.backgroundColor = "transparent";
+        btn.style.color = "#111827";
+        btn.style.borderRadius = "30px";
+    });
 
-
-educatebtn.addEventListener('click', () => {
-    resetButtonColors(); // Reset all button colors
-    educatebtn.style.backgroundColor = "#FF6500"; // Set active button color
-    educatebtn.style.borderRadius = "30px"; // Set active button color
-    education.style.display = "block";
-    experience.style.display = "none";
-    skills.style.display = "none";
-});
-
-
-experiencebtn.addEventListener('click', () => {
-    resetButtonColors(); // Reset all button colors
-    experiencebtn.style.backgroundColor = "#FF6500"; // Set active button color
-    experiencebtn.style.borderRadius = "30px";  // Set active button color
-    education.style.display = "none";
-    experience.style.display = "block";
-    skills.style.display = "none";
-});
-
-
-skillbtn.addEventListener('click', () => {
-    resetButtonColors(); // Reset all button colors
-    skillbtn.style.backgroundColor = "#FF6500"; // Set active button color
-    skillbtn.style.borderRadius = "30px";  // Set active button color
+    // Hide all content
     education.style.display = "none";
     experience.style.display = "none";
-    skills.style.display = "block";
+    skills.style.display = "none";
+}
+
+function activateTab(button, section) {
+    resetTabs();
+
+    button.style.backgroundColor = activeColor;
+    button.style.color = "#ffffff";
+
+    section.style.display = "block";
+}
+
+// Event Listeners
+educateBtn.addEventListener("click", () => {
+    activateTab(educateBtn, education);
 });
 
+experienceBtn.addEventListener("click", () => {
+    activateTab(experienceBtn, experience);
+});
+
+skillBtn.addEventListener("click", () => {
+    activateTab(skillBtn, skills);
+});
+
+// Default tab when page loads
+activateTab(educateBtn, education);
 
 const links = document.querySelectorAll('.blank').forEach(link => {
     link.setAttribute('target', '_blank');
